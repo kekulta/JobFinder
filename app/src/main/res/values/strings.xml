@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="published_january">
+        <item quantity="other">Опубликовано %d января</item>
+    </plurals>
+    <plurals name="published_february">
+        <item quantity="other">Опубликовано %d февраля</item>
+    </plurals>
+    <plurals name="published_march">
+        <item quantity="other">Опубликовано %d марта</item>
+    </plurals>
+    <plurals name="published_april">
+        <item quantity="other">Опубликовано %d апреля</item>
+    </plurals>
+    <plurals name="published_may">
+        <item quantity="other">Опубликовано %d мая</item>
+    </plurals>
+    <plurals name="published_june">
+        <item quantity="other">Опубликовано %d июня</item>
+    </plurals>
+    <plurals name="published_july">
+        <item quantity="other">Опубликовано %d июля</item>
+    </plurals>
+    <plurals name="published_august">
+        <item quantity="other">Опубликовано %d августа</item>
+    </plurals>
+    <plurals name="published_september">
+        <item quantity="other">Опубликовано %d сентября</item>
+    </plurals>
+    <plurals name="published_october">
+        <item quantity="other">Опубликовано %d октября</item>
+    </plurals>
+    <plurals name="published_november">
+        <item quantity="other">Опубликовано %d ноября</item>
+    </plurals>
+    <plurals name="published_december">
+        <item quantity="other">Опубликовано %d декабря</item>
+    </plurals>
+
+    <plurals name="vacancies_count">
+        <item quantity="one">%d вакансия</item>
+        <item quantity="few">%d вакансии</item>
+        <item quantity="other">%d вакансий</item>
+    </plurals>
+
+    <plurals name="vacancies_more_count">
+        <item quantity="one">Ещё %d вакансия</item>
+        <item quantity="few">Ещё %d вакансии</item>
+        <item quantity="other">Ещё %d вакансий</item>
+    </plurals>
+
+    <plurals name="looking_number">
+        <item quantity="one">Сейчас просматривает 1 человек</item>
+        <item quantity="few">Сейчас просматривают %d человека</item>
+        <item quantity="other">Сейчас просматривают %d человек</item>
+    </plurals>
+
+    <plurals name="looking_number_short">
+        <item quantity="one">1 человек сейчас смотрит</item>
+        <item quantity="few">%d человека сейчас смотрят</item>
+        <item quantity="other">%d человек сейчас смотрят</item>
+    </plurals>
+
+    <plurals name="applied_number">
+        <item quantity="one">%d человек уже откликнулся</item>
+        <item quantity="few">%d человека уже откликнулись</item>
+        <item quantity="other">%d человек уже откликнулись</item>
+    </plurals>
+
+    <plurals name="vacancies_number">
+        <item quantity="one">%d вакансия</item>
+        <item quantity="few">%d вакансии</item>
+        <item quantity="other">%d вакансий</item>
+    </plurals>
+</resources>

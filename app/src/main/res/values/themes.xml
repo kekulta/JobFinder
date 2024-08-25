@@ -1,0 +1,27 @@
+<resources>
+
+    <style name="Base.Theme.JobFinder" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <style name="Theme.JobFinder" parent="Base.Theme.JobFinder">
+        <item name="colorAccent">@color/blue</item>
+        <item name="buttonSmall1Style">@style/JobFinder.Button.Small1</item>
+        <item name="buttonSmall2Style">@style/JobFinder.Button.Small2</item>
+        <item name="buttonSmall3Style">@style/JobFinder.Button.Small3</item>
+        <item name="buttonBig1Style">@style/JobFinder.Button.Big1</item>
+        <item name="buttonBig2Style">@style/JobFinder.Button.Big2</item>
+        <item name="buttonBig3Style">@style/JobFinder.Button.Big3</item>
+        <item name="buttonBig4Style">@style/JobFinder.Button.Big4</item>
+        <item name="inputFieldStyle">@style/JobFinder.Input.MailInputField</item>
+        <item name="enterPinViewStyle">@style/JobFinder.Input.EnterPinView</item>
+        <item name="enterMailViewStyle">@style/JobFinder.Molecule.EnterMailView</item>
+        <item name="searchEmployeesViewStyle">@style/JobFinder.Molecule.SearchEmployeesView</item>
+        <item name="likeCheckboxStyle">@style/JobFinder.Checkbox.Like</item>
+        <item name="vacancyCardViewStyle">@style/JobFinder.Molecule.VacancyCardView</item>
+        <item name="activityCardViewStyle">@style/JobFinder.Molecule.ActivityCardView</item>
+        <item name="locationCardViewStyle">@style/JobFinder.Molecule.LocationCardView</item>
+        <item name="offerViewStyle">@style/JobFinder.Molecule.OfferView</item>
+        <item name="titleViewStyle">@style/JobFinder.Text.TitleView</item>
+
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="enterMailViewStyle" format="reference" />
+    <attr name="searchEmployeesViewStyle" format="reference" />
+    <attr name="enterPinViewStyle" format="reference" />
+    <attr name="titleViewStyle" format="reference" />
+    <attr name="activityCardViewStyle" format="reference" />
+    <attr name="locationCardViewStyle" format="reference" />
+    <attr name="vacancyCardViewStyle" format="reference" />
+</resources>

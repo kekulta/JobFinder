@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Basic -->
+    <color name="transparent">#00000000</color>
+    <color name="black">#FF000000</color>
+    <color name="grey1">#FF222325</color>
+    <color name="grey2">#FF313234</color>
+    <color name="grey3">#FF858688</color>
+    <color name="grey4">#FF9F9F9F</color>
+    <color name="grey5">#FFDBDBDB</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Special -->
+    <color name="blue">#FF2B7EFE</color>
+    <color name="dark_blue">#FF00427D</color>
+    <color name="green">#FF4CB24E</color>
+    <color name="dark_green">#FF015905</color>
+    <color name="red">#FFFF0000</color>
+
+    <!-- Shadows -->
+    <color name="shadows">#FF0C0C0C</color>
+</resources>

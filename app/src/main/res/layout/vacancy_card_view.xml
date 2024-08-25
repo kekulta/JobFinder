@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <tech.kekulta.uikit.LikeCheckbox
+        android:id="@+id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lookingNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lookingNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Сейчас просматривает ... человек"
+        android:textAppearance="@style/TextAppearance.JobFinder.Text1"
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintEnd_toStartOf="@id/like"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="UI/UX Designer"
+        android:textAppearance="@style/TextAppearance.JobFinder.Title3"
+        android:textColor="@color/text_color"
+        app:layout_constraintBottom_toTopOf="@id/salary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lookingNumber" />
+
+    <TextView
+        android:id="@+id/salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="100"
+        android:textAppearance="@style/TextAppearance.JobFinder.Title2"
+        android:textColor="@color/text_color"
+        app:layout_constraintBottom_toTopOf="@id/city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Minsk"
+        android:textAppearance="@style/TextAppearance.JobFinder.Text1"
+        android:textColor="@color/text_color"
+        app:layout_constraintBottom_toTopOf="@id/company"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/salary" />
+
+    <TextView
+        android:id="@+id/company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Yandex"
+        android:textAppearance="@style/TextAppearance.JobFinder.Text1"
+        android:textColor="@color/text_color"
+        app:layout_constraintBottom_toTopOf="@id/experience"
+        app:layout_constraintEnd_toStartOf="@id/approved"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city" />
+
+    <ImageView
+        android:id="@+id/approved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/approved"
+        app:layout_constraintBottom_toBottomOf="@id/company"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/company"
+        app:layout_constraintTop_toTopOf="@id/company" />
+
+    <ImageView
+        android:id="@+id/experience_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/company"
+        app:layout_constraintBottom_toBottomOf="@id/experience"
+        app:layout_constraintEnd_toStartOf="@id/experience"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/experience" />
+
+    <TextView
+        android:id="@+id/experience"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Опыт от 1 года до 3 лет"
+        android:textAppearance="@style/TextAppearance.JobFinder.Text1"
+        android:textColor="@color/text_color"
+        app:layout_constraintBottom_toTopOf="@id/published_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/experience_icon"
+        app:layout_constraintTop_toBottomOf="@id/company" />
+
+    <TextView
+        android:id="@+id/published_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Опубликовано 20 февраля"
+        android:textAppearance="@style/TextAppearance.JobFinder.Text1"
+        android:textColor="@color/grey3"
+        app:layout_constraintBottom_toTopOf="@id/response"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/experience" />
+
+    <tech.kekulta.uikit.ButtonBig3
+        android:id="@+id/response"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="Откликнуться"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/published_date" />
+</merge>

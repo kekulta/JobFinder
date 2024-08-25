@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="buttonSmall1Style" format="reference" />
+    <attr name="buttonSmall2Style" format="reference" />
+    <attr name="buttonSmall3Style" format="reference" />
+    <attr name="buttonBig1Style" format="reference" />
+    <attr name="buttonBig2Style" format="reference" />
+    <attr name="buttonBig3Style" format="reference" />
+    <attr name="buttonBig4Style" format="reference" />
+    <attr name="likeCheckboxStyle" format="reference" />
+    <attr name="inputFieldStyle" format="reference" />
+    <attr name="enterMailViewStyle" format="reference" />
+    <attr name="searchEmployeesViewStyle" format="reference" />
+    <attr name="enterPinViewStyle" format="reference" />
+    <attr name="offerViewStyle" format="reference" />
+</resources>
