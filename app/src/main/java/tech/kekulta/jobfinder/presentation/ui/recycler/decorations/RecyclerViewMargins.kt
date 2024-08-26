@@ -12,7 +12,8 @@ class RecyclerViewMargins(
     override fun getItemOffsets(
         outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State
     ) {
-        val position = parent.getChildLayoutPosition(view)
+        val position = parent.getChildAdapterPosition(view)
+        if (position == RecyclerView.NO_POSITION) return
         val type = adapter.getItemViewType(position)
         val margin = margins.getOrNull(type) ?: Margins()
 

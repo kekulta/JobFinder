@@ -58,14 +58,6 @@ class LikedFragment : Fragment(R.layout.fragment_liked),
         super.onCreate(savedInstanceState)
         setParent(viewModel)
         interceptBackPressed(viewModel)
-
-        lifecycleScope.launch {
-            viewModel.observeLikes().collect { vacancies ->
-                recyclerAdapter.submitList(listOf(getTitle(vacancies.size)) + vacancies.map {
-                    VacancyItem(it)
-                })
-            }
-        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -76,6 +68,15 @@ class LikedFragment : Fragment(R.layout.fragment_liked),
             this.layoutManager = recyclerLayoutManager
             this.itemAnimator?.changeDuration = 0
             this.addItemDecoration(marginsDecorator)
+        }
+
+        lifecycleScope.launch {
+            viewModel.observeLikes().collect { vacancies ->
+                recyclerAdapter.submitList(buildList {
+                    add(getTitle(vacancies.size))
+                    addAll(vacancies.map { VacancyItem(it) })
+                })
+            }
         }
     }
 
