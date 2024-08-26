@@ -5,10 +5,10 @@ import kotlinx.serialization.Serializable
 @Serializable
 enum class Destination {
     // Screens
-    SEARCH, LIKED, RESPONSES, MESSAGES, PROFILE, ENTER_MAIL, ENTER_PIN, VACANCY_DETAILS,
+    SEARCH, LIKED, APPLICATIONS, MESSAGES, PROFILE, ENTER_MAIL, ENTER_PIN, VACANCY_DETAILS,
 
     // Dialogs
-    VACANCY_RESPONSE
+    APPLICATION_DIALOG
 }
 
 object DestArgs {

@@ -17,14 +17,14 @@ fun getDialog(destination: Destination): DialogFragment {
     return when (destination) {
         Destination.SEARCH,
         Destination.LIKED,
-        Destination.RESPONSES,
+        Destination.APPLICATIONS,
         Destination.MESSAGES,
         Destination.PROFILE,
         Destination.ENTER_MAIL,
         Destination.ENTER_PIN,
         Destination.VACANCY_DETAILS -> throw IllegalArgumentException("Destination must be dialog!")
 
-        Destination.VACANCY_RESPONSE -> ApplicationBottomSheet()
+        Destination.APPLICATION_DIALOG -> ApplicationBottomSheet()
     }
 }
 
@@ -32,13 +32,13 @@ fun getFragment(destination: Destination): Class<out Fragment> {
     return when (destination) {
         Destination.SEARCH -> SearchFragment::class.java
         Destination.LIKED -> LikedFragment::class.java
-        Destination.RESPONSES -> ApplicationsFragment::class.java
+        Destination.APPLICATIONS -> ApplicationsFragment::class.java
         Destination.MESSAGES -> MessagesFragment::class.java
         Destination.PROFILE -> ProfileFragment::class.java
         Destination.ENTER_MAIL -> EnterMailFragment::class.java
         Destination.ENTER_PIN -> EnterPinFragment::class.java
         Destination.VACANCY_DETAILS -> VacancyDetailsFragment::class.java
 
-        Destination.VACANCY_RESPONSE -> throw IllegalArgumentException("Destination must not be dialog!")
+        Destination.APPLICATION_DIALOG -> throw IllegalArgumentException("Destination must not be dialog!")
     }
 }

@@ -14,10 +14,10 @@ import tech.kekulta.jobfinder.databinding.FragmentVacancyDetailsBinding
 import tech.kekulta.jobfinder.domain.models.Schedule
 import tech.kekulta.jobfinder.domain.models.VacancyId
 import tech.kekulta.jobfinder.domain.models.VacancyModel
+import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.BackPressed
 import tech.kekulta.jobfinder.presentation.ui.events.DislikeVacancyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.LikeVacancyPressed
-import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.interceptBackPressed
 import tech.kekulta.jobfinder.presentation.ui.recycler.adapters.ButtonBig2Adapter
 import tech.kekulta.jobfinder.presentation.ui.recycler.adapters.ButtonSmall3Adapter
@@ -126,13 +126,13 @@ class VacancyDetailsFragment : Fragment(R.layout.fragment_vacancy_details) {
 
                         if (model.questions.isEmpty()) {
                             binding.questionsTitle.gone()
-                            recyclerAdapter.submitList(listOf(responseButton()))
+                            recyclerAdapter.submitList(listOf(applyButton()))
                         } else {
                             recyclerAdapter.submitList(buildList {
                                 model.questions.forEach {
                                     add(ButtonItem.Small3(it, it))
                                 }
-                                add(responseButton())
+                                add(applyButton())
                             })
                             binding.questionsTitle.show()
                         }
@@ -210,7 +210,7 @@ class VacancyDetailsFragment : Fragment(R.layout.fragment_vacancy_details) {
         }
     }
 
-    private fun responseButton() =
+    private fun applyButton() =
         ButtonItem.Big2(APPLY_BUTTON, getString(R.string.apply), onClick = { eventDispatcher ->
             id?.let { id ->
                 eventDispatcher.dispatch(ApplyPressed(id))

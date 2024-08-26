@@ -12,7 +12,7 @@
         android:title="@string/liked_title" />
 
     <item
-        android:id="@+id/responses_item"
+        android:id="@+id/applications_item"
         android:enabled="true"
         android:icon="@drawable/mail_icon"
         android:title="@string/applications_title" />

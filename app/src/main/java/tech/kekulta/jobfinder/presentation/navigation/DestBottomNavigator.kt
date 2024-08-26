@@ -18,9 +18,9 @@ class DestBottomNavigator(
 
     override fun destinationToItem(destination: Destination): Int {
         return when (destination) {
-            Destination.SEARCH, Destination.VACANCY_DETAILS, Destination.VACANCY_RESPONSE -> Tab.SEARCH
+            Destination.SEARCH, Destination.VACANCY_DETAILS, Destination.APPLICATION_DIALOG -> Tab.SEARCH
             Destination.LIKED, Destination.ENTER_MAIL, Destination.ENTER_PIN -> Tab.LIKED
-            Destination.RESPONSES -> Tab.RESPONSES
+            Destination.APPLICATIONS -> Tab.APPLICATIONS
             Destination.MESSAGES -> Tab.MESSAGES
             Destination.PROFILE -> Tab.PROFILE
         }.ordinal
@@ -43,7 +43,7 @@ class DestBottomNavigator(
         return when (tab) {
             Tab.SEARCH -> Destination.SEARCH
             Tab.LIKED -> Destination.LIKED
-            Tab.RESPONSES -> Destination.RESPONSES
+            Tab.APPLICATIONS -> Destination.APPLICATIONS
             Tab.MESSAGES -> Destination.MESSAGES
             Tab.PROFILE -> Destination.PROFILE
         }

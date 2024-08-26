@@ -48,7 +48,7 @@ class LikedViewModel(
                 is ApplyPressed -> {
                     navEventDispatcher.dispatch(
                         OpenDialog(
-                            Destination.VACANCY_RESPONSE,
+                            Destination.APPLICATION_DIALOG,
                             bundleOf(DestArgs.VACANCY_ID to it.id.id)
                         )
                     )
