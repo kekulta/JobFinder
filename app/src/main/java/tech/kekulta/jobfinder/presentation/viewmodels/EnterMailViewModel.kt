@@ -2,6 +2,7 @@ package tech.kekulta.jobfinder.presentation.viewmodels
 
 import androidx.lifecycle.ViewModel
 import tech.kekulta.jobfinder.domain.interactors.LoginInteractor
+import tech.kekulta.jobfinder.presentation.navigation.SlideInOut
 import tech.kekulta.jobfinder.presentation.ui.events.BackHandle
 import tech.kekulta.jobfinder.presentation.ui.events.EventDispatcher
 import tech.kekulta.jobfinder.presentation.ui.events.NavEventDispatcher
@@ -23,6 +24,6 @@ class EnterMailViewModel(
     fun enterEmail(email: String) {
         this.email = email
         loginInteractor.sendPin(email)
-        navEventDispatcher.dispatch(NavigateTo(Destination.ENTER_PIN))
+        navEventDispatcher.dispatch(NavigateTo(Destination.ENTER_PIN, animations = SlideInOut))
     }
 }

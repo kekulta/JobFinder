@@ -2,6 +2,7 @@ package tech.kekulta.jobfinder.presentation.ui.events
 
 import android.os.Bundle
 import tech.kekulta.jobfinder.domain.models.VacancyId
+import tech.kekulta.navigation.Animations
 import tech.kekulta.navigation.Destination
 
 sealed interface Event
@@ -21,5 +22,10 @@ data class OpenLink(val link: String) : NavEvent
 data class OpenDialog(val destination: Destination, val args: Bundle? = null) : NavEvent
 data class SetRoot(val destination: Destination, val args: Bundle? = null) : NavEvent
 data class NavigateToRoot(val destination: Destination, val args: Bundle? = null) : NavEvent
-data class NavigateTo(val destination: Destination, val args: Bundle? = null) : NavEvent
+data class NavigateTo(
+    val destination: Destination,
+    val args: Bundle? = null,
+    val animations: Animations? = null,
+) : NavEvent
+
 data object NavigateBack : NavEvent

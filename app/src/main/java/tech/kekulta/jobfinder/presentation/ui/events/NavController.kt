@@ -16,7 +16,7 @@ class NavController(private val navigator: DestNavigator, private val context: C
                 is SetRoot -> navigator.setRoot(it.destination, true, it.args)
                 is NavigateToRoot -> navigator.setRoot(it.destination, false, it.args)
                 is NavigateBack -> navigator.goBack()
-                is NavigateTo -> navigator.navigate(it.destination, it.args)
+                is NavigateTo -> navigator.navigate(it.destination, it.args, it.animations)
                 is OpenLink -> openLink(it.link).let { true }
                 is OpenDialog -> navigator.openDialog(it.destination, it.args)
             }

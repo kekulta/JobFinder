@@ -14,8 +14,8 @@ open class Navigator<D : Enum<D>> {
         return true
     }
 
-    fun navigate(destination: D, args: Bundle? = null): Boolean {
-        router?.navigate(destination, args) ?: return false
+    fun navigate(destination: D, args: Bundle? = null, animations: Animations? = null): Boolean {
+        router?.navigate(destination, args, animations) ?: return false
         onNavigated()
 
         return true

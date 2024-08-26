@@ -22,10 +22,18 @@ class Router<D : Enum<D>>(
         dialog.show(fragmentManager, "TAG")
     }
 
-    fun navigate(destination: D, args: Bundle? = null) {
+    fun navigate(destination: D, args: Bundle? = null, animations: Animations? = null) {
         fragmentManager.commit {
             setReorderingAllowed(true)
             addToBackStack(null)
+            animations?.let {
+                setCustomAnimations(
+                    animations.enter,
+                    animations.exit,
+                    animations.popEnter,
+                    animations.popExit,
+                )
+            }
             replace(container, fragmentFactory(destination), args, null)
         }
 
