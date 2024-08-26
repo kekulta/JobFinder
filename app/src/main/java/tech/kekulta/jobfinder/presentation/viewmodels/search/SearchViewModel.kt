@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.update
+import logcat.logcat
 import tech.kekulta.jobfinder.R
 import tech.kekulta.jobfinder.domain.repositories.LikesRepository
 import tech.kekulta.jobfinder.domain.repositories.OffersRepository
@@ -30,6 +31,7 @@ import tech.kekulta.jobfinder.presentation.ui.events.VacancyPressed
 import tech.kekulta.jobfinder.presentation.viewmodels.base.AbstractCoroutineViewModel
 import tech.kekulta.navigation.DestArgs
 import tech.kekulta.navigation.Destination
+import kotlin.math.log
 
 @SuppressLint("StaticFieldLeak")
 class SearchViewModel(

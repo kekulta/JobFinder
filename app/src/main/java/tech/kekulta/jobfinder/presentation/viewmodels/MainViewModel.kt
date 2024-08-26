@@ -30,9 +30,9 @@ class MainViewModel(
 
     fun getStartDestination(): Destination {
         return when (loginInteractor.observeStatus().value) {
-            LoginStatus.UNAUTHORIZED -> Destination.ENTER_MAIL
-            LoginStatus.PIN_SENT -> Destination.ENTER_PIN
-            LoginStatus.AUTHORIZED -> Destination.SEARCH
+            LoginStatus.Unauthorized -> Destination.ENTER_MAIL
+            is LoginStatus.PinSent -> Destination.ENTER_PIN
+            LoginStatus.Authorized -> Destination.SEARCH
         }
     }
 

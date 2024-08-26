@@ -25,3 +25,4 @@ rootProject.name = "JobFinder"
 include(":app")
 include(":navigation")
 include(":uikit")
+include(":network")

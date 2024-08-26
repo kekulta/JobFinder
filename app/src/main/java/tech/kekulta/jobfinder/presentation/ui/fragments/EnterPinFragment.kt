@@ -3,7 +3,9 @@ package tech.kekulta.jobfinder.presentation.ui.fragments
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import by.kirich1409.viewbindingdelegate.viewBinding
+import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import tech.kekulta.jobfinder.R
 import tech.kekulta.jobfinder.databinding.FragmentEnterPinBinding
@@ -25,6 +27,12 @@ class EnterPinFragment : Fragment(R.layout.fragment_enter_pin) {
         handleSystemBar(binding.main)
         binding.pinInput.setOnInputListener { pin ->
             viewModel.enterPin(pin)
+        }
+
+        lifecycleScope.launch {
+            viewModel.observeStatus().collect {
+                binding.pinInput.bind(it ?: "...")
+            }
         }
     }
 }

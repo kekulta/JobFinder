@@ -31,7 +31,7 @@ class DestBottomNavigator(
     }
 
     override fun openTab(destination: Destination) {
-        if (loginInteractor.observeStatus().value == LoginStatus.AUTHORIZED) {
+        if (loginInteractor.observeStatus().value == LoginStatus.Authorized) {
             navController.dispatch(NavigateToRoot(destination))
         } else {
             logcat { "BottomNavigation disabled in non authorized state!" }
