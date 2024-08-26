@@ -7,15 +7,18 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 
-abstract class AbstractCoroutineRepository {
+abstract class AbstractCoroutineManager {
     private val holder = mutableMapOf<Any, Job>()
     private val managerScope = CoroutineScope(Dispatchers.Main)
 
     fun launchScope(
         scopeId: Any,
         dispatcher: CoroutineDispatcher = Dispatchers.IO,
+        keepOld: Boolean = false,
         block: suspend CoroutineScope.() -> Unit
     ) {
+        if (holder[scopeId]?.isActive == true && keepOld) return
+
         holder[scopeId]?.cancel()
         holder[scopeId] = managerScope.launch(dispatcher) {
             block()

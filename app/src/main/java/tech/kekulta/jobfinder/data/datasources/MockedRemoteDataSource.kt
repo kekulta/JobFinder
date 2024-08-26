@@ -1,5 +1,6 @@
 package tech.kekulta.jobfinder.data.datasources
 
+
 import android.content.Context
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -13,12 +14,12 @@ import java.io.IOException
 import java.io.InputStream
 
 
-class MockedRemoteDataSource(private val context: Context) {
-    fun fetchRecommendations(): Flow<List<VacancyDto>> {
+class MockedRemoteDataSource(private val context: Context) : DataSource {
+    override fun fetchRecommendations(): Flow<List<VacancyDto>> {
         return fetch().map { it?.vacancies ?: emptyList() }
     }
 
-    fun fetchOffers(): Flow<List<OfferDto>> {
+    override fun fetchOffers(): Flow<List<OfferDto>> {
         return fetch().map { it?.offers ?: emptyList() }
     }
 

@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.kotlinx.serialization)
+    alias(libs.plugins.ktorfit)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -58,4 +60,6 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.logcat)
     implementation(libs.glide)
+    implementation(libs.bundles.ktorfit)
+    ksp(libs.ktorfit.ksp)
 }

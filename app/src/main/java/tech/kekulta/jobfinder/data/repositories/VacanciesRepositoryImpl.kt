@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map
-import tech.kekulta.jobfinder.data.datasources.MockedRemoteDataSource
+import tech.kekulta.jobfinder.data.datasources.DataSource
 import tech.kekulta.jobfinder.data.mappers.VacancyDtoToVacancyModelMapper
 import tech.kekulta.jobfinder.domain.models.VacancyId
 import tech.kekulta.jobfinder.domain.models.VacancyModel
@@ -13,9 +13,9 @@ import tech.kekulta.jobfinder.domain.repositories.VacanciesRepository
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class VacanciesRepositoryImpl(
-    private val dataSource: MockedRemoteDataSource,
+    private val dataSource: DataSource,
     private val vacancyDtoToVacancyModelMapper: VacancyDtoToVacancyModelMapper,
-) : AbstractCoroutineRepository(), VacanciesRepository {
+) : AbstractCoroutineManager(), VacanciesRepository {
     private val updater = MutableStateFlow(0)
 
     override fun observeRecommendation(): Flow<List<VacancyModel>> = updater.flatMapLatest {
