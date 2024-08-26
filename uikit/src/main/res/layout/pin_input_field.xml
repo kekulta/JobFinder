@@ -15,9 +15,9 @@
 
         <TextView
             android:id="@+id/i1"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="@dimen/size_x48"
+            android:layout_height="@dimen/size_x48"
+            android:layout_marginEnd="@dimen/size_x8"
             android:background="@drawable/background_round_low"
             android:backgroundTint="@color/grey2"
             android:gravity="center"
@@ -29,9 +29,9 @@
         <TextView
 
             android:id="@+id/i2"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="@dimen/size_x48"
+            android:layout_height="@dimen/size_x48"
+            android:layout_marginEnd="@dimen/size_x8"
             android:background="@drawable/background_round_low"
             android:backgroundTint="@color/grey2"
             android:gravity="center"
@@ -42,9 +42,9 @@
 
         <TextView
             android:id="@+id/i3"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="@dimen/size_x48"
+            android:layout_height="@dimen/size_x48"
+            android:layout_marginEnd="@dimen/size_x8"
             android:background="@drawable/background_round_low"
             android:backgroundTint="@color/grey2"
             android:gravity="center"
@@ -55,9 +55,9 @@
 
         <TextView
             android:id="@+id/i4"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="@dimen/size_x48"
+            android:layout_height="@dimen/size_x48"
+            android:layout_marginEnd="@dimen/size_x8"
             android:background="@drawable/background_round_low"
             android:backgroundTint="@color/grey2"
             android:gravity="center"

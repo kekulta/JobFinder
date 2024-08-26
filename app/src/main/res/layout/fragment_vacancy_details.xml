@@ -2,8 +2,10 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/shadows">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -14,7 +16,7 @@
             android:layout_height="match_parent"
             android:backgroundTint="@color/shadows"
             android:orientation="vertical"
-            android:paddingHorizontal="16dp"
+            android:paddingHorizontal="@dimen/size_x16"
             tools:context=".presentation.ui.fragments.SearchFragment">
 
             <LinearLayout
@@ -28,12 +30,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:padding="8dp"
+                    android:padding="@dimen/size_x8"
                     android:src="@drawable/back_arrow" />
 
                 <View
                     android:layout_width="0dp"
-                    android:layout_height="1dp"
+                    android:layout_height="@dimen/size_x2"
                     android:layout_weight="1" />
 
                 <LinearLayout
@@ -45,23 +47,23 @@
 
                     <ImageView
                         android:id="@+id/watch"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginStart="8dp"
+                        android:layout_width="@dimen/size_x24"
+                        android:layout_height="@dimen/size_x24"
+                        android:layout_marginStart="@dimen/size_x8"
                         android:src="@drawable/watch" />
 
                     <ImageView
                         android:id="@+id/share"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginStart="8dp"
+                        android:layout_width="@dimen/size_x24"
+                        android:layout_height="@dimen/size_x24"
+                        android:layout_marginStart="@dimen/size_x8"
                         android:src="@drawable/share" />
 
                     <tech.kekulta.uikit.LikeCheckbox
                         android:id="@+id/like"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp" />
+                        android:layout_marginStart="@dimen/size_x8" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -76,7 +78,7 @@
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/size_x16"
                     android:text=""
                     android:textAppearance="@style/TextAppearance.JobFinder.Title1"
                     android:textColor="@color/text_color" />
@@ -85,7 +87,7 @@
                     android:id="@+id/salary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/size_x16"
                     android:text=""
                     android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                     android:textColor="@color/text_color" />
@@ -94,16 +96,18 @@
                     android:id="@+id/experience"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/size_x16"
                     android:text=""
                     android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                     android:textColor="@color/text_color" />
 
+
+                <!--  6dp in Figma!  -->
                 <TextView
                     android:id="@+id/schedule"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/size_x6"
                     android:text=""
                     android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                     android:textColor="@color/text_color" />
@@ -112,7 +116,7 @@
                     android:id="@+id/activity_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="@dimen/size_x24"
                     android:orientation="horizontal">
 
                     <tech.kekulta.jobfinder.presentation.ui.customviews.ActivityCardView
@@ -123,8 +127,8 @@
 
                     <View
                         android:id="@+id/activity_divider"
-                        android:layout_width="8dp"
-                        android:layout_height="1dp" />
+                        android:layout_width="@dimen/size_x8"
+                        android:layout_height="@dimen/size_x2" />
 
                     <tech.kekulta.jobfinder.presentation.ui.customviews.ActivityCardView
                         android:id="@+id/activity_looking"
@@ -137,13 +141,13 @@
                     android:id="@+id/location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp" />
+                    android:layout_marginTop="@dimen/size_x24" />
 
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/size_x16"
                     android:text=""
                     android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                     android:textColor="@color/text_color" />
@@ -152,8 +156,8 @@
                     android:id="@+id/responsibility_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text=""
+                    android:layout_marginTop="@dimen/size_x16"
+                    android:text="@string/responsibilities_title"
                     android:textAppearance="@style/TextAppearance.JobFinder.Title1"
                     android:textColor="@color/text_color" />
 
@@ -161,7 +165,7 @@
                     android:id="@+id/responsibility"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/size_x8"
                     android:text=""
                     android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                     android:textColor="@color/text_color" />
@@ -175,7 +179,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/size_x8"
                         android:text="@string/ask_employer"
                         android:textAppearance="@style/TextAppearance.JobFinder.Title4"
                         android:textColor="@color/text_color" />
@@ -199,8 +203,8 @@
 
         <com.google.android.material.progressindicator.CircularProgressIndicator
             android:id="@+id/indicator"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="@dimen/size_x48"
+            android:layout_height="@dimen/size_x48"
             android:layout_gravity="center"
             android:indeterminate="true"
             android:visibility="visible"

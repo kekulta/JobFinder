@@ -13,10 +13,10 @@ import tech.kekulta.jobfinder.presentation.viewmodels.LikedViewModel
 import tech.kekulta.jobfinder.presentation.viewmodels.MainViewModel
 import tech.kekulta.jobfinder.presentation.viewmodels.MessagesViewModel
 import tech.kekulta.jobfinder.presentation.viewmodels.ProfileViewModel
-import tech.kekulta.jobfinder.presentation.viewmodels.ApplicationViewModel
+import tech.kekulta.jobfinder.presentation.viewmodels.application.ApplicationViewModel
 import tech.kekulta.jobfinder.presentation.viewmodels.ApplicationsViewModel
-import tech.kekulta.jobfinder.presentation.viewmodels.SearchViewModel
-import tech.kekulta.jobfinder.presentation.viewmodels.VacancyDetailsViewModel
+import tech.kekulta.jobfinder.presentation.viewmodels.search.SearchViewModel
+import tech.kekulta.jobfinder.presentation.viewmodels.details.VacancyDetailsViewModel
 import tech.kekulta.navigation.DestNavigator
 
 val presentationModule = module {

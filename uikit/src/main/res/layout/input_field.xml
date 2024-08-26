@@ -17,7 +17,7 @@
             android:id="@+id/leading_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/size_x8"
             android:src="@drawable/back_arrow" />
 
         <!--    40dp in figma!!    -->
@@ -25,14 +25,14 @@
             android:id="@+id/edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
+            android:layout_marginHorizontal="@dimen/size_x8"
             android:layout_weight="1"
             android:autofillHints="searchField"
             android:backgroundTint="@color/grey2"
             android:ellipsize="end"
             android:imeOptions="actionDone"
             android:inputType="textEmailAddress"
-            android:minHeight="48dp"
+            android:minHeight="@dimen/size_x48"
             android:textAppearance="@style/TextAppearance.JobFinder.Text1"
             android:textColor="@color/text_color"
             android:textColorHint="@color/grey3" />
@@ -41,7 +41,7 @@
             android:id="@+id/clear_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/size_x8"
             android:src="@drawable/cross_icon"
             android:visibility="gone" />
     </LinearLayout>

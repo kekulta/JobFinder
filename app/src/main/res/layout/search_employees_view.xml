@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:background="@drawable/background_round_low"
     android:backgroundTint="@color/grey1"
-    android:paddingHorizontal="16dp"
-    android:paddingVertical="24dp">
+    android:paddingHorizontal="@dimen/size_x16"
+    android:paddingVertical="@dimen/size_x24">
 
     <TextView
         android:id="@+id/title"
@@ -38,7 +38,7 @@
         android:id="@+id/find_employees"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/size_x16"
         android:text="@string/search_for_employees_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

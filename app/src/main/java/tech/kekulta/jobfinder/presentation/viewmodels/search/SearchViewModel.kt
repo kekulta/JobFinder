@@ -1,4 +1,4 @@
-package tech.kekulta.jobfinder.presentation.viewmodels
+package tech.kekulta.jobfinder.presentation.viewmodels.search
 
 import android.content.Context
 import androidx.core.os.bundleOf
@@ -26,6 +26,7 @@ import tech.kekulta.jobfinder.presentation.ui.events.ShowMore
 import tech.kekulta.jobfinder.presentation.ui.events.UiEvent
 import tech.kekulta.jobfinder.presentation.ui.events.UiEventDispatcher
 import tech.kekulta.jobfinder.presentation.ui.events.VacancyPressed
+import tech.kekulta.jobfinder.presentation.viewmodels.base.AbstractCoroutineViewModel
 import tech.kekulta.navigation.DestArgs
 import tech.kekulta.navigation.Destination
 

@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="16dp">
+    android:layout_marginHorizontal="@dimen/size_x16">
 
     <tech.kekulta.jobfinder.presentation.ui.customviews.EnterPinView
         android:id="@+id/pin_input"

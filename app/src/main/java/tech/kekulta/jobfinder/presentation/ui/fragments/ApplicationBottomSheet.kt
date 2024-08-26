@@ -17,9 +17,9 @@ import tech.kekulta.jobfinder.presentation.ui.events.AddCover
 import tech.kekulta.jobfinder.presentation.ui.events.BackPressed
 import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.interceptBackPressed
-import tech.kekulta.jobfinder.presentation.viewmodels.ApplicationEvent
-import tech.kekulta.jobfinder.presentation.viewmodels.ApplicationState
-import tech.kekulta.jobfinder.presentation.viewmodels.ApplicationViewModel
+import tech.kekulta.jobfinder.presentation.viewmodels.application.ApplicationEvent
+import tech.kekulta.jobfinder.presentation.viewmodels.application.ApplicationState
+import tech.kekulta.jobfinder.presentation.viewmodels.application.ApplicationViewModel
 import tech.kekulta.navigation.DestArgs
 import tech.kekulta.uikit.gone
 import tech.kekulta.uikit.hide

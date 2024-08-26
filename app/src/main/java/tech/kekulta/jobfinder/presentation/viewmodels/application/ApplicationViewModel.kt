@@ -1,4 +1,4 @@
-package tech.kekulta.jobfinder.presentation.viewmodels
+package tech.kekulta.jobfinder.presentation.viewmodels.application
 
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -14,11 +14,12 @@ import kotlinx.coroutines.launch
 import tech.kekulta.jobfinder.domain.models.VacancyId
 import tech.kekulta.jobfinder.domain.repositories.VacanciesRepository
 import tech.kekulta.jobfinder.presentation.ui.events.AddCover
+import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.BackPressed
 import tech.kekulta.jobfinder.presentation.ui.events.EventDispatcher
-import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.UiEvent
 import tech.kekulta.jobfinder.presentation.ui.events.UiEventDispatcher
+import tech.kekulta.jobfinder.presentation.viewmodels.base.AbstractCoroutineViewModel
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class ApplicationViewModel(
@@ -97,12 +98,3 @@ class ApplicationViewModel(
     }
 }
 
-sealed interface ApplicationState {
-    data object Loading : ApplicationState
-    data class NoCover(val title: String) : ApplicationState
-    data class OpenCover(val title: String) : ApplicationState
-}
-
-sealed interface ApplicationEvent {
-    data object CloseDialog : ApplicationEvent
-}

@@ -28,9 +28,11 @@ import tech.kekulta.jobfinder.presentation.ui.recycler.items.OfferBlockItem
 import tech.kekulta.jobfinder.presentation.ui.recycler.items.SearchBlockItem
 import tech.kekulta.jobfinder.presentation.ui.recycler.items.TitleItem
 import tech.kekulta.jobfinder.presentation.ui.recycler.items.VacancyItem
-import tech.kekulta.jobfinder.presentation.viewmodels.SearchState
-import tech.kekulta.jobfinder.presentation.viewmodels.SearchViewModel
-import tech.kekulta.uikit.dp
+import tech.kekulta.jobfinder.presentation.viewmodels.search.SearchState
+import tech.kekulta.jobfinder.presentation.viewmodels.search.SearchViewModel
+import tech.kekulta.uikit.dimen
+import tech.kekulta.uikit.handleSystemBar
+import tech.kekulta.uikit.R as uikit
 
 class SearchFragment : Fragment(R.layout.fragment_search) {
     private val binding by viewBinding(FragmentSearchBinding::bind)
@@ -41,10 +43,10 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
             adapter = recyclerAdapter,
             margins = listOf(
                 Margins(),
-                Margins(marginTop = requireContext().dp(16)),
-                Margins(marginTop = requireContext().dp(16)),
-                Margins(marginTop = requireContext().dp(16)),
-                Margins(marginTop = requireContext().dp(16)),
+                Margins(marginTop = requireContext().dimen(uikit.dimen.size_x16)),
+                Margins(marginTop = requireContext().dimen(uikit.dimen.size_x16)),
+                Margins(marginTop = requireContext().dimen(uikit.dimen.size_x16)),
+                Margins(marginTop = requireContext().dimen(uikit.dimen.size_x16)),
             ),
         )
     }
@@ -73,6 +75,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        handleSystemBar(binding.main)
         binding.recycler.apply {
             this.adapter = recyclerAdapter
             this.layoutManager = recyclerLayoutManager

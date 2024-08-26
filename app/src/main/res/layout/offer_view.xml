@@ -4,15 +4,15 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/size_x32"
+        android:layout_height="@dimen/size_x32"
         android:src="@drawable/level_up" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/size_x16"
         android:layout_weight="1"
         android:ellipsize="end"
         android:maxLines="2"

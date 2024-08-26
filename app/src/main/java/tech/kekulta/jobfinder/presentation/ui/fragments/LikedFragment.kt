@@ -23,7 +23,9 @@ import tech.kekulta.jobfinder.presentation.ui.recycler.decorations.RecyclerViewM
 import tech.kekulta.jobfinder.presentation.ui.recycler.items.TitleItem
 import tech.kekulta.jobfinder.presentation.ui.recycler.items.VacancyItem
 import tech.kekulta.jobfinder.presentation.viewmodels.LikedViewModel
-import tech.kekulta.uikit.dp
+import tech.kekulta.uikit.dimen
+import tech.kekulta.uikit.handleSystemBar
+import tech.kekulta.uikit.R as uikit
 
 class LikedFragment : Fragment(R.layout.fragment_liked),
     EventDispatcher<UiEvent> by UiEventDispatcher() {
@@ -34,7 +36,7 @@ class LikedFragment : Fragment(R.layout.fragment_liked),
         RecyclerViewMargins(
             adapter = recyclerAdapter,
             margins = listOf(
-                Margins(marginTop = requireContext().dp(16)),
+                Margins(marginTop = requireContext().dimen(uikit.dimen.size_x16)),
                 Margins(),
             ),
         )
@@ -68,6 +70,7 @@ class LikedFragment : Fragment(R.layout.fragment_liked),
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        handleSystemBar(binding.main)
         binding.recycler.apply {
             this.adapter = recyclerAdapter
             this.layoutManager = recyclerLayoutManager

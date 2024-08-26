@@ -9,7 +9,8 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import tech.kekulta.jobfinder.R
 import tech.kekulta.jobfinder.databinding.LocationCardViewBinding
 import tech.kekulta.jobfinder.domain.models.Address
-import tech.kekulta.uikit.dp
+import tech.kekulta.uikit.dimen
+import tech.kekulta.uikit.R as uikit
 
 class LocationCardView @JvmOverloads constructor(
     context: Context,
@@ -18,7 +19,7 @@ class LocationCardView @JvmOverloads constructor(
     private val binding = LocationCardViewBinding.inflate(LayoutInflater.from(context), this)
 
     init {
-        Glide.with(this).load(R.drawable.map_image).transform(RoundedCorners(dp(16)))
+        Glide.with(this).load(R.drawable.map_image).transform(RoundedCorners(dimen(uikit.dimen.size_x16)))
             .into(binding.map)
     }
 

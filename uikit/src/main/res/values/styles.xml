@@ -18,7 +18,7 @@
         <item name="android:background">@drawable/background_round_medium</item>
         <item name="backgroundTint">@color/blue_background_color</item>
         <item name="android:textColor">@color/text_color</item>
-        <item name="android:minHeight">48dp</item>
+        <item name="android:minHeight">@dimen/size_x48</item>
     </style>
 
     <style name="JobFinder.Button.Big2" parent="@android:style/Widget.Button">
@@ -28,7 +28,7 @@
         <item name="android:background">@drawable/background_round_medium</item>
         <item name="backgroundTint">@color/green_background_color</item>
         <item name="android:textColor">@color/text_color</item>
-        <item name="android:minHeight">48dp</item>
+        <item name="android:minHeight">@dimen/size_x48</item>
     </style>
 
     <style name="JobFinder.Button.Big3" parent="@android:style/Widget.Button">
@@ -38,7 +38,7 @@
         <item name="android:background">@drawable/background_round_high</item>
         <item name="backgroundTint">@color/green_background_color</item>
         <item name="android:textColor">@color/text_color</item>
-        <item name="android:minHeight">32dp</item>
+        <item name="android:minHeight">@dimen/size_x32</item>
     </style>
 
     <style name="JobFinder.Button.Big4" parent="@android:style/Widget.Button">
@@ -48,7 +48,7 @@
         <item name="android:background">@drawable/background_round_medium</item>
         <item name="backgroundTint">@color/blue_background_color</item>
         <item name="android:textColor">@color/text_color</item>
-        <item name="android:minHeight">40dp</item>
+        <item name="android:minHeight">@dimen/size_x40</item>
     </style>
 
     <!--    40dp in figma!!    -->
@@ -62,8 +62,8 @@
         <item name="android:iconTint">@color/text_color</item>
         <item name="backgroundTint">@color/grey2</item>
         <item name="android:textColor">@color/text_color</item>
-        <item name="android:minHeight">48dp</item>
-        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">@dimen/size_x48</item>
+        <item name="android:minWidth">@dimen/size_x48</item>
     </style>
 
     <!--    48dp in figma!!    -->
@@ -75,7 +75,7 @@
 
     <!--    33dp in figma!!    -->
     <style name="JobFinder.Button.Small3" parent="@android:style/Widget.Button">
-        <item name="android:paddingHorizontal">12dp</item>
+        <item name="android:paddingHorizontal">@dimen/size_x12</item>
         <item name="android:gravity">center</item>
         <item name="iconGravity">textStart</item>
         <item name="android:clipToOutline">true</item>
@@ -85,16 +85,15 @@
         <item name="android:iconTint">@color/text_color</item>
         <item name="backgroundTint">@color/grey2</item>
         <item name="android:textColor">@color/text_color</item>
-        <item name="android:minHeight">36dp</item>
-        <item name="android:minWidth">36dp</item>
+        <item name="android:minHeight">@dimen/size_x36</item>
+        <item name="android:minWidth">@dimen/size_x36</item>
     </style>
 
     <!-- Text -->
-    <!--TODO: It shouldn't all be TitleLarge!-->
     <style name="TextAppearance.JobFinder.Title1" parent="TextAppearance.Material3.TitleLarge">
         <item name="fontFamily">@font/sf_pro_display_semibold</item>
-        <item name="android:textSize">22sp</item>
-        <item name="android:lineHeight">26.4sp</item>
+        <item name="android:textSize">@dimen/text_x22</item>
+        <item name="android:lineHeight">@dimen/text_x22_120</item>
 
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0</item>
@@ -103,8 +102,8 @@
 
     <style name="TextAppearance.JobFinder.Title2" parent="TextAppearance.Material3.TitleLarge">
         <item name="fontFamily">@font/sf_pro_display_semibold</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:lineHeight">24sp</item>
+        <item name="android:textSize">@dimen/text_x20</item>
+        <item name="android:lineHeight">@dimen/text_x22_120</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0</item>
     </style>
@@ -112,8 +111,8 @@
 
     <style name="TextAppearance.JobFinder.Title3" parent="TextAppearance.Material3.TitleLarge">
         <item name="fontFamily">@font/sf_pro_display_medium</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:lineHeight">19.2sp</item>
+        <item name="android:textSize">@dimen/text_x16</item>
+        <item name="android:lineHeight">@dimen/text_x16_120</item>
 
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0</item>
@@ -121,8 +120,8 @@
 
     <style name="TextAppearance.JobFinder.Title4" parent="TextAppearance.Material3.TitleLarge">
         <item name="fontFamily">@font/sf_pro_display_medium</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:lineHeight">16.8sp</item>
+        <item name="android:textSize">@dimen/text_x14</item>
+        <item name="android:lineHeight">@dimen/text_x14_120</item>
 
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0</item>
@@ -131,8 +130,8 @@
 
     <style name="TextAppearance.JobFinder.Text1" parent="TextAppearance.Material3.TitleLarge">
         <item name="fontFamily">@font/sf_pro_display_regular</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:lineHeight">16.8sp</item>
+        <item name="android:textSize">@dimen/text_x14</item>
+        <item name="android:lineHeight">@dimen/text_x14_120</item>
 
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0</item>
@@ -141,8 +140,8 @@
 
     <style name="TextAppearance.JobFinder.ButtonText1" parent="TextAppearance.Material3.TitleLarge">
         <item name="fontFamily">@font/sf_pro_display_semibold</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:lineHeight">20.8sp</item>
+        <item name="android:textSize">@dimen/text_x16</item>
+        <item name="android:lineHeight">@dimen/text_x16_130</item>
 
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0</item>
@@ -150,8 +149,8 @@
 
     <style name="TextAppearance.JobFinder.ButtonText2" parent="TextAppearance.Material3.TitleLarge">
         <item name="fontFamily">@font/sf_pro_display_regular</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:lineHeight">18.2sp</item>
+        <item name="android:textSize">@dimen/text_x14</item>
+        <item name="android:lineHeight">@dimen/text_x14_130</item>
 
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0</item>
@@ -160,8 +159,8 @@
 
     <style name="TextAppearance.JobFinder.TabText" parent="TextAppearance.Material3.TitleLarge">
         <item name="fontFamily">@font/sf_pro_display_regular</item>
-        <item name="android:textSize">10sp</item>
-        <item name="android:lineHeight">11sp</item>
+        <item name="android:textSize">@dimen/size_x10</item>
+        <item name="android:lineHeight">@dimen/text_x10_110</item>
 
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0</item>
@@ -170,8 +169,8 @@
 
     <style name="TextAppearance.JobFinder.Number" parent="TextAppearance.Material3.TitleLarge">
         <item name="fontFamily">@font/sf_pro_display_semibold</item>
-        <item name="android:textSize">7sp</item>
-        <item name="android:lineHeight">7.7sp</item>
+        <item name="android:textSize">@dimen/text_x7</item>
+        <item name="android:lineHeight">@dimen/text_x7_110</item>
 
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0</item>

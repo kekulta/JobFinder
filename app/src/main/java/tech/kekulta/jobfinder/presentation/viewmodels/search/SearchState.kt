@@ -1,4 +1,4 @@
-package tech.kekulta.jobfinder.presentation.viewmodels
+package tech.kekulta.jobfinder.presentation.viewmodels.search
 
 import tech.kekulta.jobfinder.domain.models.OfferModel
 import tech.kekulta.jobfinder.domain.models.VacancyModel
@@ -21,6 +21,3 @@ sealed class SearchState(
     ) : SearchState(vacancies, vacanciesCount)
 }
 
-enum class SearchStateType {
-    RECOMMENDATIONS, SEARCH
-}

@@ -9,6 +9,7 @@ import tech.kekulta.jobfinder.R
 import tech.kekulta.jobfinder.databinding.FragmentEnterMailBinding
 import tech.kekulta.jobfinder.presentation.ui.events.interceptBackPressed
 import tech.kekulta.jobfinder.presentation.viewmodels.EnterMailViewModel
+import tech.kekulta.uikit.handleSystemBar
 
 class EnterMailFragment : Fragment(R.layout.fragment_enter_mail) {
     private val binding by viewBinding(FragmentEnterMailBinding::bind)
@@ -21,7 +22,7 @@ class EnterMailFragment : Fragment(R.layout.fragment_enter_mail) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        handleSystemBar(binding.main)
         binding.enterEmail.setEmailListener { email ->
             viewModel.enterEmail(email)
         }

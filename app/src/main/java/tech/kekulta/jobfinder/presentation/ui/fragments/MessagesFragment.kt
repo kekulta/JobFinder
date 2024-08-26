@@ -11,6 +11,7 @@ import tech.kekulta.jobfinder.databinding.FragmentPlaceholderBinding
 import tech.kekulta.jobfinder.presentation.ui.events.BackPressed
 import tech.kekulta.jobfinder.presentation.ui.events.interceptBackPressed
 import tech.kekulta.jobfinder.presentation.viewmodels.MessagesViewModel
+import tech.kekulta.uikit.handleSystemBar
 
 class MessagesFragment : Fragment(R.layout.fragment_placeholder) {
     private val binding by viewBinding(FragmentPlaceholderBinding::bind)
@@ -23,7 +24,7 @@ class MessagesFragment : Fragment(R.layout.fragment_placeholder) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        handleSystemBar(binding.main)
         Glide.with(this).load(R.drawable.avatar_icon).circleCrop().into(binding.avatar)
         binding.backButton.setOnClickListener { viewModel.dispatch(BackPressed) }
     }

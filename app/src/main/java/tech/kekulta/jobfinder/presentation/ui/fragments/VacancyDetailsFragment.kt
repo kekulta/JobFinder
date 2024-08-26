@@ -13,7 +13,6 @@ import tech.kekulta.jobfinder.R
 import tech.kekulta.jobfinder.databinding.FragmentVacancyDetailsBinding
 import tech.kekulta.jobfinder.domain.models.Schedule
 import tech.kekulta.jobfinder.domain.models.VacancyId
-import tech.kekulta.jobfinder.domain.models.VacancyModel
 import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.BackPressed
 import tech.kekulta.jobfinder.presentation.ui.events.DislikeVacancyPressed
@@ -25,13 +24,16 @@ import tech.kekulta.jobfinder.presentation.ui.recycler.base.buildCompositeAdapte
 import tech.kekulta.jobfinder.presentation.ui.recycler.decorations.Margins
 import tech.kekulta.jobfinder.presentation.ui.recycler.decorations.RecyclerViewMargins
 import tech.kekulta.jobfinder.presentation.ui.recycler.items.ButtonItem
-import tech.kekulta.jobfinder.presentation.viewmodels.VacancyDetailsViewModel
+import tech.kekulta.jobfinder.presentation.viewmodels.details.VacancyDetailsState
+import tech.kekulta.jobfinder.presentation.viewmodels.details.VacancyDetailsViewModel
 import tech.kekulta.navigation.DestArgs
-import tech.kekulta.uikit.dp
+import tech.kekulta.uikit.dimen
 import tech.kekulta.uikit.gone
+import tech.kekulta.uikit.handleSystemBar
 import tech.kekulta.uikit.hide
 import tech.kekulta.uikit.show
 import java.util.Locale
+import tech.kekulta.uikit.R as uikit
 
 class VacancyDetailsFragment : Fragment(R.layout.fragment_vacancy_details) {
     private val binding by viewBinding(FragmentVacancyDetailsBinding::bind)
@@ -42,8 +44,8 @@ class VacancyDetailsFragment : Fragment(R.layout.fragment_vacancy_details) {
         RecyclerViewMargins(
             adapter = recyclerAdapter,
             margins = listOf(
-                Margins(marginTop = dp(8)),
-                Margins(marginTop = dp(16)),
+                Margins(marginTop = dimen(uikit.dimen.size_x8)),
+                Margins(marginTop = dimen(uikit.dimen.size_x16)),
             ),
         )
     }
@@ -71,7 +73,7 @@ class VacancyDetailsFragment : Fragment(R.layout.fragment_vacancy_details) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        handleSystemBar(binding.main)
         val id = this.id
         if (id == null) {
             binding.container.hide()
@@ -234,7 +236,3 @@ class VacancyDetailsFragment : Fragment(R.layout.fragment_vacancy_details) {
     }
 }
 
-sealed interface VacancyDetailsState {
-    data object Loading : VacancyDetailsState
-    data class Loaded(val model: VacancyModel) : VacancyDetailsState
-}

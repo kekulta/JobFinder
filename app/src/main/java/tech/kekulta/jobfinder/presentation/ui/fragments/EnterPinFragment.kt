@@ -9,6 +9,7 @@ import tech.kekulta.jobfinder.R
 import tech.kekulta.jobfinder.databinding.FragmentEnterPinBinding
 import tech.kekulta.jobfinder.presentation.ui.events.interceptBackPressed
 import tech.kekulta.jobfinder.presentation.viewmodels.EnterPinViewModel
+import tech.kekulta.uikit.handleSystemBar
 
 class EnterPinFragment : Fragment(R.layout.fragment_enter_pin) {
     private val binding by viewBinding(FragmentEnterPinBinding::bind)
@@ -21,7 +22,7 @@ class EnterPinFragment : Fragment(R.layout.fragment_enter_pin) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        handleSystemBar(binding.main)
         binding.pinInput.setOnInputListener { pin ->
             viewModel.enterPin(pin)
         }

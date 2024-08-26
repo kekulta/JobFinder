@@ -106,4 +106,5 @@
     <string name="full_day">полный день</string>
     <string name="part_time">частичная занятость</string>
     <string name="remote_work">удалённая работа</string>
+    <string name="responsibilities_title">Ваши задачи</string>
 </resources>

@@ -15,45 +15,45 @@
     <style name="JobFinder.Molecule.EnterMailView" parent="@android:style/Widget">
         <item name="android:background">@drawable/background_round_low</item>
         <item name="android:backgroundTint">@color/grey1</item>
-        <item name="android:paddingHorizontal">16dp</item>
-        <item name="android:paddingVertical">24dp</item>
+        <item name="android:paddingHorizontal">@dimen/size_x16</item>
+        <item name="android:paddingVertical">@dimen/size_x24</item>
     </style>
 
     <style name="JobFinder.Molecule.OfferView" parent="@android:style/Widget">
-        <item name="android:layout_width">132dp</item>
+        <item name="android:layout_width">@dimen/size_x132</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
         <item name="android:background">@drawable/background_round_low</item>
         <item name="android:backgroundTint">@color/grey1</item>
-        <item name="android:padding">8dp</item>
+        <item name="android:padding">@dimen/size_x8</item>
     </style>
 
     <style name="JobFinder.Molecule.SearchEmployeesView" parent="@android:style/Widget">
         <item name="android:background">@drawable/background_round_low</item>
         <item name="android:backgroundTint">@color/grey1</item>
-        <item name="android:paddingHorizontal">16dp</item>
-        <item name="android:paddingVertical">24dp</item>
+        <item name="android:paddingHorizontal">@dimen/size_x16</item>
+        <item name="android:paddingVertical">@dimen/size_x24</item>
     </style>
 
     <style name="JobFinder.Molecule.ActivityCardView" parent="@android:style/Widget">
         <item name="android:background">@drawable/background_round_low</item>
         <item name="android:backgroundTint">@color/dark_green</item>
-        <item name="android:padding">8dp</item>
+        <item name="android:padding">@dimen/size_x8</item>
         <item name="android:orientation">horizontal</item>
     </style>
 
     <style name="JobFinder.Molecule.LocationCardView" parent="@android:style/Widget">
         <item name="android:background">@drawable/background_round_low</item>
         <item name="android:backgroundTint">@color/grey2</item>
-        <item name="android:paddingHorizontal">16dp</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:paddingVertical">12dp</item>
+        <item name="android:paddingHorizontal">@dimen/size_x16</item>
+        <item name="android:paddingVertical">@dimen/size_x12</item>
     </style>
 
     <style name="JobFinder.Molecule.VacancyCardView" parent="@android:style/Widget">
         <item name="android:background">@drawable/background_round_low</item>
         <item name="android:backgroundTint">@color/grey1</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:padding">@dimen/size_x16</item>
     </style>
 
     <style name="JobFinder.Input.EnterPinView" parent="@android:style/Widget">

@@ -1,4 +1,4 @@
-package tech.kekulta.jobfinder.presentation.viewmodels
+package tech.kekulta.jobfinder.presentation.viewmodels.details
 
 import androidx.core.os.bundleOf
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -21,7 +21,7 @@ import tech.kekulta.jobfinder.presentation.ui.events.OpenDialog
 import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.UiEvent
 import tech.kekulta.jobfinder.presentation.ui.events.UiEventDispatcher
-import tech.kekulta.jobfinder.presentation.ui.fragments.VacancyDetailsState
+import tech.kekulta.jobfinder.presentation.viewmodels.base.AbstractCoroutineViewModel
 import tech.kekulta.navigation.DestArgs
 import tech.kekulta.navigation.Destination
 

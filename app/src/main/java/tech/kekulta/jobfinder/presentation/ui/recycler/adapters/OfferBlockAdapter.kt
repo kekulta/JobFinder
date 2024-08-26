@@ -12,7 +12,8 @@ import tech.kekulta.jobfinder.presentation.ui.recycler.base.DelegateAdapter
 import tech.kekulta.jobfinder.presentation.ui.recycler.decorations.RecyclerViewRightMargin
 import tech.kekulta.jobfinder.presentation.ui.recycler.items.OfferBlockItem
 import tech.kekulta.jobfinder.presentation.ui.recycler.items.OfferItem
-import tech.kekulta.uikit.dp
+import tech.kekulta.uikit.dimen
+import tech.kekulta.uikit.R as uikit
 
 class OfferBlockAdapter :
     DelegateAdapter<OfferBlockItem, OfferBlockAdapter.OfferBlockVh>(OfferBlockItem::class.java),
@@ -45,7 +46,7 @@ class OfferBlockAdapter :
                 this.adapter = offersAdapter
                 this.layoutManager = offersLayoutManager
                 this.itemAnimator?.changeDuration = 0
-                this.addItemDecoration(RecyclerViewRightMargin(context.dp(8)))
+                this.addItemDecoration(RecyclerViewRightMargin(dimen(uikit.dimen.size_x8)))
             }
         }
 
@@ -54,4 +55,3 @@ class OfferBlockAdapter :
         }
     }
 }
-

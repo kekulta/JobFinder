@@ -37,8 +37,8 @@
                 <!--   48dp in Figma!!     -->
                 <ImageView
                     android:id="@+id/avatar"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="@dimen/size_x64"
+                    android:layout_height="@dimen/size_x64"
                     android:src="@mipmap/avatar_icon_round"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="@dimen/size_x16"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
@@ -72,20 +72,20 @@
                 android:id="@+id/divider"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="@dimen/size_x24"
                 app:dividerColor="@color/grey2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/avatar" />
 
             <EditText
-                android:autofillHints="no"
-                android:inputType="text"
                 android:id="@+id/input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints="no"
                 android:backgroundTint="@color/black"
                 android:hint="@string/your_cover_letter"
+                android:inputType="text"
                 android:minLines="2"
                 android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                 android:textColor="@color/text_color"
@@ -96,7 +96,7 @@
                 android:id="@+id/add_cover"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="@dimen/size_x32"
                 android:text="@string/add_cover"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.JobFinder.Text1"
@@ -106,7 +106,7 @@
                 android:id="@+id/apply"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="@dimen/size_x24"
                 android:text="@string/apply" />
         </LinearLayout>
     </LinearLayout>
@@ -114,8 +114,8 @@
 
     <com.google.android.material.progressindicator.CircularProgressIndicator
         android:id="@+id/indicator"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/size_x48"
+        android:layout_height="@dimen/size_x48"
         android:layout_gravity="center"
         android:indeterminate="true"
         app:indicatorColor="@color/grey3" />

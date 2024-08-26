@@ -11,7 +11,8 @@ import tech.kekulta.jobfinder.presentation.ui.events.UiEventDispatcher
 import tech.kekulta.jobfinder.presentation.ui.recycler.base.BindableViewHolder
 import tech.kekulta.jobfinder.presentation.ui.recycler.base.DelegateAdapter
 import tech.kekulta.jobfinder.presentation.ui.recycler.items.OfferItem
-import tech.kekulta.uikit.dp
+import tech.kekulta.uikit.dimen
+import tech.kekulta.uikit.R as uikit
 
 class OfferAdapter :
     DelegateAdapter<OfferItem, OfferAdapter.OfferVh>(OfferItem::class.java),
@@ -21,8 +22,8 @@ class OfferAdapter :
         OfferVh(OfferView(parent.context).also {
             it.setLayoutParams(
                 LinearLayout.LayoutParams(
-                    parent.context.dp(132),
-                    parent.context.dp(132),
+                    parent.context.dimen(uikit.dimen.size_x132),
+                    parent.context.dimen(uikit.dimen.size_x132),
                 )
             )
             it.setParent(this)

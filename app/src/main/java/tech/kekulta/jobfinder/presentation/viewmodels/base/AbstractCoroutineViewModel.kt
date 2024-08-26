@@ -1,4 +1,4 @@
-package tech.kekulta.jobfinder.presentation.viewmodels
+package tech.kekulta.jobfinder.presentation.viewmodels.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
