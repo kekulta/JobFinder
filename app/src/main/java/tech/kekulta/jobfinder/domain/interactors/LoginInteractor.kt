@@ -9,14 +9,18 @@ enum class LoginStatus {
 
 class LoginInteractor {
     private val status = MutableStateFlow(LoginStatus.UNAUTHORIZED)
+    private var email: String? = null
+    private var pin: String? = null
 
     fun observeStatus(): StateFlow<LoginStatus> = status
 
     fun sendPin(email: String) {
         status.value = LoginStatus.PIN_SENT
+        this.email = email
     }
 
     fun enterPin(pin: String) {
         status.value = LoginStatus.AUTHORIZED
+        this.pin = pin
     }
 }

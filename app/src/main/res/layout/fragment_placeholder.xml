@@ -37,7 +37,7 @@
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Здесь скоро будет \nчто-то интересное!"
+        android:text="@string/placeholder_text"
         android:textAppearance="@style/TextAppearance.JobFinder.Title1"
         android:textColor="@color/text_color"
         app:layout_constraintBottom_toBottomOf="parent"

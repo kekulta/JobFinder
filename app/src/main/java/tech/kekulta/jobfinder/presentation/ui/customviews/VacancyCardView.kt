@@ -13,7 +13,7 @@ import tech.kekulta.jobfinder.domain.models.VacancyModel
 import tech.kekulta.jobfinder.presentation.ui.events.DislikeVacancyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.EventDispatcher
 import tech.kekulta.jobfinder.presentation.ui.events.LikeVacancyPressed
-import tech.kekulta.jobfinder.presentation.ui.events.ResponseToVacancyPressed
+import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.UiEvent
 import tech.kekulta.jobfinder.presentation.ui.events.UiEventDispatcher
 import tech.kekulta.jobfinder.presentation.ui.events.VacancyPressed
@@ -37,9 +37,9 @@ class VacancyCardView @JvmOverloads constructor(
             }
         }
 
-        binding.response.setOnClickListener {
+        binding.apply.setOnClickListener {
             id?.let { id ->
-                dispatch(ResponseToVacancyPressed(id))
+                dispatch(ApplyPressed(id))
             }
         }
 
@@ -54,30 +54,30 @@ class VacancyCardView @JvmOverloads constructor(
         with(binding) {
             id = model.id
             if (model.lookingNumber == 0) {
-                val constraintLayout = this@VacancyCardView;
-                val constraintSet = ConstraintSet();
-                constraintSet.clone(constraintLayout);
+                val constraintLayout = this@VacancyCardView
+                val constraintSet = ConstraintSet()
+                constraintSet.clone(constraintLayout)
                 constraintSet.connect(
                     R.id.like, ConstraintSet.START, R.id.title, ConstraintSet.END, 0
-                );
+                )
                 constraintSet.connect(
                     R.id.title, ConstraintSet.END, R.id.like, ConstraintSet.START, 0
-                );
-                constraintSet.applyTo(constraintLayout);
+                )
+                constraintSet.applyTo(constraintLayout)
 
                 lookingNumber.gone()
             } else {
-                val constraintLayout = this@VacancyCardView;
-                val constraintSet = ConstraintSet();
-                constraintSet.clone(constraintLayout);
+                val constraintLayout = this@VacancyCardView
+                val constraintSet = ConstraintSet()
+                constraintSet.clone(constraintLayout)
                 constraintSet.connect(
                     R.id.like, ConstraintSet.START, R.id.lookingNumber, ConstraintSet.END, 0
-                );
+                )
                 constraintSet.connect(
                     R.id.lookingNumber, ConstraintSet.END, R.id.like, ConstraintSet.START, 0
-                );
+                )
 
-                constraintSet.applyTo(constraintLayout);
+                constraintSet.applyTo(constraintLayout)
                 lookingNumber.show()
                 lookingNumber.text = resources.getQuantityString(
                     R.plurals.looking_number,

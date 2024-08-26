@@ -31,6 +31,6 @@ class EnterPinView @JvmOverloads constructor(
     }
 
     fun bind(email: String) {
-        binding.title.text = "Отправили код на $email"
+        binding.title.text = context.getString(R.string.send_to_to_mail, email)
     }
 }

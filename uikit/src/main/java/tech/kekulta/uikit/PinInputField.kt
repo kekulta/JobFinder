@@ -32,7 +32,7 @@ class PinInputField @JvmOverloads constructor(
         binding.et.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE && binding.et.text.length == 4) {
                 doneListener?.invoke(binding.et.text.toString())
-                true;
+                true
             } else {
                 false
             }

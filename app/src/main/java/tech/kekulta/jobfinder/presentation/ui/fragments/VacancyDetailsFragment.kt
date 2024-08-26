@@ -17,7 +17,7 @@ import tech.kekulta.jobfinder.domain.models.VacancyModel
 import tech.kekulta.jobfinder.presentation.ui.events.BackPressed
 import tech.kekulta.jobfinder.presentation.ui.events.DislikeVacancyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.LikeVacancyPressed
-import tech.kekulta.jobfinder.presentation.ui.events.ResponseToVacancyPressed
+import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.interceptBackPressed
 import tech.kekulta.jobfinder.presentation.ui.recycler.adapters.ButtonBig2Adapter
 import tech.kekulta.jobfinder.presentation.ui.recycler.adapters.ButtonSmall3Adapter
@@ -101,7 +101,8 @@ class VacancyDetailsFragment : Fragment(R.layout.fragment_vacancy_details) {
                         }
 
                         binding.title.text = model.title
-                        binding.experience.text = "Требуемый опыт: ${model.experience.text}"
+                        binding.experience.text =
+                            getString(R.string.required_experience, model.experience.text)
                         binding.salary.text = model.salary.full
                         binding.schedule.text = formatSchedules(model.schedules)
                         binding.location.setLocation(model.address)
@@ -210,22 +211,26 @@ class VacancyDetailsFragment : Fragment(R.layout.fragment_vacancy_details) {
     }
 
     private fun responseButton() =
-        ButtonItem.Big2("RESPONSE_BUTTON", "Откликнуться", onClick = { eventDispatcher ->
+        ButtonItem.Big2(APPLY_BUTTON, getString(R.string.apply), onClick = { eventDispatcher ->
             id?.let { id ->
-                eventDispatcher.dispatch(ResponseToVacancyPressed(id))
+                eventDispatcher.dispatch(ApplyPressed(id))
             }
         })
 
     private fun formatSchedules(schedules: List<Schedule>): String {
         return schedules.joinToString(separator = ", ") {
             when (it) {
-                Schedule.FULL_TIME -> "полная занятость"
-                Schedule.FULL_DAY -> "полный день"
-                Schedule.PART_TIME -> "частичная занятость"
-                Schedule.REMOTE -> "удалённая работа"
+                Schedule.FULL_TIME -> getString(R.string.full_time)
+                Schedule.FULL_DAY -> getString(R.string.full_day)
+                Schedule.PART_TIME -> getString(R.string.part_time)
+                Schedule.REMOTE -> getString(R.string.remote_work)
             }
         }
             .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+    }
+
+    companion object {
+        const val APPLY_BUTTON = "APPLY_BUTTON"
     }
 }
 

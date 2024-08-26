@@ -72,4 +72,38 @@
         <item quantity="few">%d вакансии</item>
         <item quantity="other">%d вакансий</item>
     </plurals>
+
+    <string name="app_name">JobFinder</string>
+    <string name="send_to_to_mail">Отправили код на %1$s</string>
+    <string name="required_experience">Требуемый опыт: %1$s</string>
+    <string name="search_title">Поиск</string>
+    <string name="liked_title">Избранное</string>
+    <string name="applications_title">Отклики</string>
+    <string name="messages_title">Сообщения</string>
+    <string name="profile_title">Профиль</string>
+    <string name="resume_for_application">Резюме для отклика</string>
+    <string name="your_cover_letter">Ваше сопроводительное письмо</string>
+    <string name="add_cover">Добавить сопроводительное</string>
+    <string name="apply">Откликнуться</string>
+    <string name="search_jobs">Поиск работы</string>
+    <string name="continue_button_text">Продолжить</string>
+    <string name="continue_with_password">Войти с паролем</string>
+    <string name="send_code_to_placeholder">Отправили код на…</string>
+    <string name="pin_code_rationale">Напишите его, чтобы подтвердить, что это вы, а не кто-то другой входит в личный кабинет</string>
+    <string name="confirm_button_text">Подтвердить</string>
+    <string name="login_to_personal_account">Вход в личный кабинет</string>
+    <string name="placeholder_text">Здесь скоро будет \nчто-то интересное!</string>
+    <string name="map">Карта</string>
+    <string name="ask_employer">Задайте вопрос работодателю</string>
+    <string name="employer_gets_your_question">Он получит его с откликом на вакансию</string>
+    <string name="filters">По соответствию</string>
+    <string name="search_for_employees">Поиск сотрудников</string>
+    <string name="publish_vacancies">Размещение вакансий и доступ к базе резюме</string>
+    <string name="search_for_employees_button">Я ищу сотрудников</string>
+    <string name="vacancies_for_you">Вакансии для вас</string>
+    <string name="recommendtions_search_hint">Должность, ключевые слова</string>
+    <string name="full_time">полная занятость</string>
+    <string name="full_day">полный день</string>
+    <string name="part_time">частичная занятость</string>
+    <string name="remote_work">удалённая работа</string>
 </resources>

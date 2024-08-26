@@ -18,7 +18,7 @@ import tech.kekulta.jobfinder.presentation.ui.events.LikeVacancyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.NavEventDispatcher
 import tech.kekulta.jobfinder.presentation.ui.events.NavigateBack
 import tech.kekulta.jobfinder.presentation.ui.events.OpenDialog
-import tech.kekulta.jobfinder.presentation.ui.events.ResponseToVacancyPressed
+import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.UiEvent
 import tech.kekulta.jobfinder.presentation.ui.events.UiEventDispatcher
 import tech.kekulta.jobfinder.presentation.ui.fragments.VacancyDetailsState
@@ -42,7 +42,7 @@ class VacancyDetailsViewModel(
                     true
                 }
 
-                is ResponseToVacancyPressed -> {
+                is ApplyPressed -> {
                     navEventDispatcher.dispatch(
                         OpenDialog(
                             Destination.VACANCY_RESPONSE,

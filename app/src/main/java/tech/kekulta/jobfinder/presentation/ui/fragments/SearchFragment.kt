@@ -86,13 +86,18 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                     when (state) {
                         is SearchState.Recommendations -> {
                             buildList {
-                                add(SearchBlockItem.Idle(SEARCH_ID, "Должность, ключевые слова"))
-                                add(OfferBlockItem("offers", state.offers))
-                                add(TitleItem(title = "Вакансии для вас"))
+                                add(
+                                    SearchBlockItem.Idle(
+                                        SEARCH_ID,
+                                        getString(R.string.recommendtions_search_hint)
+                                    )
+                                )
+                                add(OfferBlockItem(OFFERS_ID, state.offers))
+                                add(TitleItem(title = getString(R.string.vacancies_for_you)))
                                 addAll(state.vacancies.map { VacancyItem(it) })
                                 if (state.vacanciesCount != 0 && state.vacanciesCount - state.vacancies.size > 0) {
                                     add(ButtonItem.Big1(
-                                        "BUTTON_ID", resources.getQuantityString(
+                                        BUTTON_ID, resources.getQuantityString(
                                             R.plurals.vacancies_more_count,
                                             state.vacanciesCount - state.vacancies.size,
                                             state.vacanciesCount - state.vacancies.size,
@@ -134,6 +139,8 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
     }
 
     companion object {
+        const val OFFERS_ID = "OFFERS_ID"
+        const val BUTTON_ID = "BUTTON_ID"
         const val SEARCH_ID = "SEARCH_ID"
     }
 }

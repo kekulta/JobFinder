@@ -4,29 +4,29 @@
         android:id="@+id/search_item"
         android:enabled="true"
         android:icon="@drawable/search_icon"
-        android:title="Поиск" />
+        android:title="@string/search_title" />
     <item
         android:id="@+id/liked_item"
         android:enabled="true"
         android:icon="@drawable/heart_icon"
-        android:title="Избранное" />
+        android:title="@string/liked_title" />
 
     <item
         android:id="@+id/responses_item"
         android:enabled="true"
         android:icon="@drawable/mail_icon"
-        android:title="Отклики" />
+        android:title="@string/applications_title" />
 
 
     <item
         android:id="@+id/messages_item"
         android:enabled="true"
         android:icon="@drawable/message_icon"
-        android:title="Сообщения" />
+        android:title="@string/messages_title" />
 
     <item
         android:id="@+id/profile_item"
         android:enabled="true"
         android:icon="@drawable/profile_icon"
-        android:title="Профиль" />
+        android:title="@string/profile_title" />
 </menu>

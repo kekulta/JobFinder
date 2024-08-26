@@ -8,7 +8,6 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.LinearLayout
 import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat.getSystemService
-import androidx.core.content.res.ResourcesCompat
 import androidx.core.widget.addTextChangedListener
 import tech.kekulta.uikit.databinding.InputFieldBinding
 
@@ -55,7 +54,7 @@ class InputField @JvmOverloads constructor(
                 imm?.hideSoftInputFromWindow(binding.editText.windowToken, 0)
                 binding.editText.clearFocus()
 
-                true;
+                true
             } else {
                 false
             }
@@ -80,17 +79,6 @@ class InputField @JvmOverloads constructor(
         } else {
             binding.leadingIcon.setImageResource(icon)
             binding.leadingIcon.show()
-        }
-    }
-
-    fun setErrorState(isError: Boolean) {
-        if (isError) {
-            binding.inputField.foreground =
-                ResourcesCompat.getDrawable(resources, R.drawable.border_round_low, context.theme)
-            binding.errorMessage.show()
-        } else {
-            binding.inputField.foreground = null
-            binding.errorMessage.gone()
         }
     }
 }

@@ -77,7 +77,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="UI/UX Designer"
+                    android:text=""
                     android:textAppearance="@style/TextAppearance.JobFinder.Title1"
                     android:textColor="@color/text_color" />
 
@@ -86,7 +86,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Уровень дохода не указан"
+                    android:text=""
                     android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                     android:textColor="@color/text_color" />
 
@@ -95,7 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Требуемый опыт: от 1 года до 3 лет"
+                    android:text=""
                     android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                     android:textColor="@color/text_color" />
 
@@ -104,7 +104,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:text="Полная занятость, полный день"
+                    android:text=""
                     android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                     android:textColor="@color/text_color" />
 
@@ -120,10 +120,11 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
+
                     <View
                         android:id="@+id/activity_divider"
                         android:layout_width="8dp"
-                        android:layout_height="1dp"/>
+                        android:layout_height="1dp" />
 
                     <tech.kekulta.jobfinder.presentation.ui.customviews.ActivityCardView
                         android:id="@+id/activity_looking"
@@ -143,7 +144,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="MOBYRIX - динамично развивающаяся продуктовая IT-компания, специализирующаяся на разработке мобильных приложений для iOS и Android. Наша команда работает над собственными продуктами в разнообразных сферах: от утилит до развлечений и бизнес-приложений. Мы ценим талант и стремление к инновациям и в данный момент в поиске талантливого UX/UI Designer, готового присоединиться к нашей команде и внести значимый вклад в развитие наших проектов."
+                    android:text=""
                     android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                     android:textColor="@color/text_color" />
 
@@ -152,7 +153,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Ваши задачи"
+                    android:text=""
                     android:textAppearance="@style/TextAppearance.JobFinder.Title1"
                     android:textColor="@color/text_color" />
 
@@ -161,7 +162,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="-Проектировать пользовательский опыт, проводить UX исследования; -Разрабатывать адаптивный дизайн интерфейса для мобильных приложений; -Разрабатывать быстрые прототипы для тестирования идеи дизайна и их последующая; интеграция на основе обратной связи от команды и пользователей; -Взаимодействовать с командой разработчиков для обеспечения точной реализации ваших дизайнов; -Анализ пользовательского опыта и адаптация под тренды."
+                    android:text=""
                     android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                     android:textColor="@color/text_color" />
 
@@ -175,14 +176,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Задайте вопрос работодателю"
+                        android:text="@string/ask_employer"
                         android:textAppearance="@style/TextAppearance.JobFinder.Title4"
                         android:textColor="@color/text_color" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Он получит его с откликом на вакансию"
+                        android:text="@string/employer_gets_your_question"
                         android:textAppearance="@style/TextAppearance.JobFinder.Title4"
                         android:textColor="@color/grey3" />
                 </LinearLayout>

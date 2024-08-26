@@ -15,7 +15,7 @@ import tech.kekulta.jobfinder.databinding.BottomSheetApplicationBinding
 import tech.kekulta.jobfinder.domain.models.VacancyId
 import tech.kekulta.jobfinder.presentation.ui.events.AddCover
 import tech.kekulta.jobfinder.presentation.ui.events.BackPressed
-import tech.kekulta.jobfinder.presentation.ui.events.ResponseToVacancyPressed
+import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.interceptBackPressed
 import tech.kekulta.jobfinder.presentation.viewmodels.ApplicationEvent
 import tech.kekulta.jobfinder.presentation.viewmodels.ApplicationState
@@ -52,7 +52,7 @@ class ApplicationBottomSheet :
         Glide.with(this).load(R.drawable.avatar_icon).circleCrop().into(binding.avatar)
 
         binding.addCover.setOnClickListener { viewModel.dispatch(AddCover) }
-        binding.response.setOnClickListener { viewModel.dispatch(ResponseToVacancyPressed(id)) }
+        binding.apply.setOnClickListener { viewModel.dispatch(ApplyPressed(id)) }
 
         lifecycleScope.launch {
             viewModel.observeEvents().collect { event ->

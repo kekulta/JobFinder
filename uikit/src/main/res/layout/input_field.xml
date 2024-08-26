@@ -30,7 +30,6 @@
             android:autofillHints="searchField"
             android:backgroundTint="@color/grey2"
             android:ellipsize="end"
-            android:hint="Электронная почта или телефон"
             android:imeOptions="actionDone"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
@@ -46,13 +45,4 @@
             android:src="@drawable/cross_icon"
             android:visibility="gone" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/error_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Некорректный адрес электронной почты"
-        android:textAppearance="@style/TextAppearance.JobFinder.Text1"
-        android:textColor="@color/red"
-        android:visibility="gone" />
 </merge>

@@ -86,7 +86,7 @@ class LikedFragment : Fragment(R.layout.fragment_liked),
 
     private fun getTitle(count: Int): TitleItem {
         return TitleItem(
-            title = "Избранное",
+            title = resources.getString(R.string.liked_title),
             subtitle = resources.getQuantityString(R.plurals.vacancies_number, count, count)
         )
     }

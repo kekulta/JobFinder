@@ -87,8 +87,8 @@ class MainActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
             viewModel.observeBadgeStatus().collect {
-                badge.isVisible = it > 0;
-                badge.number = it;
+                badge.isVisible = it > 0
+                badge.number = it
             }
         }
     }

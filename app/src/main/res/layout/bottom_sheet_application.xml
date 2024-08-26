@@ -54,7 +54,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Резюме для отклика"
+                        android:text="@string/resume_for_application"
                         android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                         android:textColor="@color/grey3" />
 
@@ -62,7 +62,7 @@
                         android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="UI/UX дизайнер"
+                        android:text=""
                         android:textAppearance="@style/TextAppearance.JobFinder.Title3"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
@@ -79,11 +79,13 @@
                 app:layout_constraintTop_toBottomOf="@id/avatar" />
 
             <EditText
+                android:autofillHints="no"
+                android:inputType="text"
                 android:id="@+id/input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                android:hint="Ваше сопроводительное письмо"
+                android:hint="@string/your_cover_letter"
                 android:minLines="2"
                 android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                 android:textColor="@color/text_color"
@@ -95,17 +97,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="Добавить сопроводительное"
+                android:text="@string/add_cover"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.JobFinder.Text1"
                 android:textColor="@color/green" />
 
             <tech.kekulta.uikit.ButtonBig2
-                android:id="@+id/response"
+                android:id="@+id/apply"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="Откликнуться" />
+                android:text="@string/apply" />
         </LinearLayout>
     </LinearLayout>
 

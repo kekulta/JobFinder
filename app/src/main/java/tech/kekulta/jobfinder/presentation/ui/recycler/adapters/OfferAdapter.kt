@@ -21,8 +21,8 @@ class OfferAdapter :
         OfferVh(OfferView(parent.context).also {
             it.setLayoutParams(
                 LinearLayout.LayoutParams(
-                    parent.context.dp(132).toInt(),
-                    parent.context.dp(132).toInt(),
+                    parent.context.dp(132),
+                    parent.context.dp(132),
                 )
             )
             it.setParent(this)

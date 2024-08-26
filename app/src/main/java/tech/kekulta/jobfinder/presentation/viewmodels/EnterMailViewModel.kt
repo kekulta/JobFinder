@@ -9,7 +9,6 @@ import tech.kekulta.jobfinder.presentation.ui.events.NavigateTo
 import tech.kekulta.jobfinder.presentation.ui.events.UiEvent
 import tech.kekulta.jobfinder.presentation.ui.events.UiEventDispatcher
 import tech.kekulta.navigation.Destination
-import kotlin.math.log
 
 class EnterMailViewModel(
     private val navEventDispatcher: NavEventDispatcher,

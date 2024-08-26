@@ -12,7 +12,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Поиск работы"
+        android:text="@string/search_jobs"
         android:textAppearance="@style/TextAppearance.JobFinder.Title3"
         android:textColor="@color/text_color"
         app:layout_constraintBottom_toTopOf="@id/input"
@@ -22,7 +22,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <tech.kekulta.uikit.MailInputField
-
         android:id="@+id/input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +36,7 @@
         android:id="@+id/ok"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Продолжить"
+        android:text="@string/continue_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/ok_with_password"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -51,7 +50,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Войти с паролем"
+        android:text="@string/continue_with_password"
         android:textAppearance="@style/TextAppearance.JobFinder.ButtonText2"
         android:textColor="@color/blue_background_color"
         app:layout_constraintBottom_toBottomOf="@id/ok"

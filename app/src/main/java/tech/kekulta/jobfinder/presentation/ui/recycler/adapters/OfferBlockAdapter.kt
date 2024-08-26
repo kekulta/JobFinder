@@ -45,7 +45,7 @@ class OfferBlockAdapter :
                 this.adapter = offersAdapter
                 this.layoutManager = offersLayoutManager
                 this.itemAnimator?.changeDuration = 0
-                this.addItemDecoration(RecyclerViewRightMargin(context.dp(8).toInt()))
+                this.addItemDecoration(RecyclerViewRightMargin(context.dp(8)))
             }
         }
 

@@ -16,7 +16,7 @@ import tech.kekulta.jobfinder.domain.repositories.VacanciesRepository
 import tech.kekulta.jobfinder.presentation.ui.events.AddCover
 import tech.kekulta.jobfinder.presentation.ui.events.BackPressed
 import tech.kekulta.jobfinder.presentation.ui.events.EventDispatcher
-import tech.kekulta.jobfinder.presentation.ui.events.ResponseToVacancyPressed
+import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.UiEvent
 import tech.kekulta.jobfinder.presentation.ui.events.UiEventDispatcher
 
@@ -48,7 +48,7 @@ class ApplicationViewModel(
                     true
                 }
 
-                is ResponseToVacancyPressed -> {
+                is ApplyPressed -> {
                     viewModelScope.launch {
                         channel.send(ApplicationEvent.CloseDialog)
                     }

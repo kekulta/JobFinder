@@ -2,7 +2,6 @@ package tech.kekulta.uikit
 
 import android.content.Context
 import android.util.AttributeSet
-import com.google.android.material.button.MaterialButton
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class ButtonSmall2 @JvmOverloads constructor(

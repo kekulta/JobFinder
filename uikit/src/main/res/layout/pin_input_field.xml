@@ -21,8 +21,7 @@
             android:background="@drawable/background_round_low"
             android:backgroundTint="@color/grey2"
             android:gravity="center"
-            android:hint="*"
-            android:inputType="numberDecimal"
+            android:hint="@string/star"
             android:maxLength="2"
             android:textColor="@color/text_color"
             android:textColorHint="@color/grey3" />
@@ -36,8 +35,7 @@
             android:background="@drawable/background_round_low"
             android:backgroundTint="@color/grey2"
             android:gravity="center"
-            android:hint="*"
-            android:inputType="numberDecimal"
+            android:hint="@string/star"
             android:maxLength="2"
             android:textColor="@color/text_color"
             android:textColorHint="@color/grey3" />
@@ -50,8 +48,7 @@
             android:background="@drawable/background_round_low"
             android:backgroundTint="@color/grey2"
             android:gravity="center"
-            android:hint="*"
-            android:inputType="numberDecimal"
+            android:hint="@string/star"
             android:maxLength="2"
             android:textColor="@color/text_color"
             android:textColorHint="@color/grey3" />
@@ -64,8 +61,7 @@
             android:background="@drawable/background_round_low"
             android:backgroundTint="@color/grey2"
             android:gravity="center"
-            android:hint="*"
-            android:inputType="numberDecimal"
+            android:hint="@string/star"
             android:maxLength="1"
             android:textColor="@color/text_color"
             android:textColorHint="@color/grey3" />

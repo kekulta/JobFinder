@@ -10,11 +10,10 @@ sealed interface NavEvent : Event
 
 data object BackPressed : UiEvent
 data object ShowMore : UiEvent
-data class TabPressed(val dest: Destination) : UiEvent
 data class LinkPressed(val link: String) : UiEvent
 data object AddCover : UiEvent
 data class VacancyPressed(val id: VacancyId) : UiEvent
-data class ResponseToVacancyPressed(val id: VacancyId) : UiEvent
+data class ApplyPressed(val id: VacancyId) : UiEvent
 data class LikeVacancyPressed(val id: VacancyId) : UiEvent
 data class DislikeVacancyPressed(val id: VacancyId) : UiEvent
 

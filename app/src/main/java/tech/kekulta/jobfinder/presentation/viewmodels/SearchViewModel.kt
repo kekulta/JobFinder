@@ -1,10 +1,12 @@
 package tech.kekulta.jobfinder.presentation.viewmodels
 
+import android.content.Context
 import androidx.core.os.bundleOf
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.update
+import tech.kekulta.jobfinder.R
 import tech.kekulta.jobfinder.domain.repositories.LikesRepository
 import tech.kekulta.jobfinder.domain.repositories.OffersRepository
 import tech.kekulta.jobfinder.domain.repositories.VacanciesRepository
@@ -19,7 +21,7 @@ import tech.kekulta.jobfinder.presentation.ui.events.NavigateBack
 import tech.kekulta.jobfinder.presentation.ui.events.NavigateTo
 import tech.kekulta.jobfinder.presentation.ui.events.OpenDialog
 import tech.kekulta.jobfinder.presentation.ui.events.OpenLink
-import tech.kekulta.jobfinder.presentation.ui.events.ResponseToVacancyPressed
+import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.ShowMore
 import tech.kekulta.jobfinder.presentation.ui.events.UiEvent
 import tech.kekulta.jobfinder.presentation.ui.events.UiEventDispatcher
@@ -33,6 +35,8 @@ class SearchViewModel(
     private val offersRepository: OffersRepository,
     private val likesRepository: LikesRepository,
     private val navEventDispatcher: NavEventDispatcher,
+    // TODO: resource manager
+    private val context: Context,
 ) : AbstractCoroutineViewModel(), EventDispatcher<UiEvent> by UiEventDispatcher() {
     private val screenType = MutableStateFlow(SearchStateType.RECOMMENDATIONS)
     private val search = MutableStateFlow<String?>(null)
@@ -66,7 +70,7 @@ class SearchViewModel(
                     true
                 }
 
-                is ResponseToVacancyPressed -> {
+                is ApplyPressed -> {
                     navEventDispatcher.dispatch(
                         OpenDialog(
                             Destination.VACANCY_RESPONSE,
@@ -110,7 +114,11 @@ class SearchViewModel(
                         }
 
                         SearchStateType.SEARCH -> {
-                            SearchState.Search(search ?: "Вакансии для вас", vacs.size, vacs)
+                            SearchState.Search(
+                                search ?: context.getString(R.string.vacancies_for_you),
+                                vacs.size,
+                                vacs
+                            )
                         }
                     }
                 }

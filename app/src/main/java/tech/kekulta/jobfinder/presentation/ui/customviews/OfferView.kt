@@ -14,7 +14,6 @@ import tech.kekulta.jobfinder.presentation.ui.events.LinkPressed
 import tech.kekulta.jobfinder.presentation.ui.events.UiEvent
 import tech.kekulta.jobfinder.presentation.ui.events.UiEventDispatcher
 import tech.kekulta.jobfinder.presentation.ui.recycler.base.Bindable
-import tech.kekulta.jobfinder.presentation.ui.recycler.items.OfferItem
 import tech.kekulta.uikit.gone
 import tech.kekulta.uikit.hide
 import tech.kekulta.uikit.show

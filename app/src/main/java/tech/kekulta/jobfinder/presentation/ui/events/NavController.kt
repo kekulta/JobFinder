@@ -29,7 +29,7 @@ class NavController(private val navigator: DestNavigator, private val context: C
 
     private fun openLink(link: String) {
         val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
-        browserIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        browserIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         logcat { "Opening link in browser: $link" }
         startActivity(context, browserIntent, null)
     }
