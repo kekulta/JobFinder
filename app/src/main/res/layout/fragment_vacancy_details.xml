@@ -102,7 +102,6 @@
                     android:textColor="@color/text_color" />
 
 
-                <!--  6dp in Figma!  -->
                 <TextView
                     android:id="@+id/schedule"
                     android:layout_width="wrap_content"

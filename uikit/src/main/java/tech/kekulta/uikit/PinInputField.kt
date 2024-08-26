@@ -21,10 +21,42 @@ class PinInputField @JvmOverloads constructor(
 
     init {
         binding.et.addTextChangedListener(onTextChanged = { s, _, _, _ ->
-            binding.i1.text = s?.getOrNull(0)?.toString() ?: ""
-            binding.i2.text = s?.getOrNull(1)?.toString() ?: ""
-            binding.i3.text = s?.getOrNull(2)?.toString() ?: ""
-            binding.i4.text = s?.getOrNull(3)?.toString() ?: ""
+            s?.getOrNull(0)?.toString().let {
+                if (it == null) {
+                    binding.s1.show()
+                    binding.i1.text = ""
+                } else {
+                    binding.s1.hide()
+                    binding.i1.text = it
+                }
+            }
+            s?.getOrNull(1)?.toString().let {
+                if (it == null) {
+                    binding.s2.show()
+                    binding.i2.text = ""
+                } else {
+                    binding.s2.hide()
+                    binding.i2.text = it
+                }
+            }
+            s?.getOrNull(2)?.toString().let {
+                if (it == null) {
+                    binding.s3.show()
+                    binding.i3.text = ""
+                } else {
+                    binding.s3.hide()
+                    binding.i3.text = it
+                }
+            }
+            s?.getOrNull(3)?.toString().let {
+                if (it == null) {
+                    binding.s4.show()
+                    binding.i4.text = ""
+                } else {
+                    binding.s4.hide()
+                    binding.i4.text = it
+                }
+            }
         })
 
         binding.et.addTextChangedListener(onTextChanged = { s, _, _, _ -> pinListener?.invoke(s.toString()) })

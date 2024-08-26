@@ -5,7 +5,7 @@ import kotlin.math.round
  * This script generates size system and adjusts it to some constant GlobalFactor.
  * It is easier to translate px from figma to dp this way if 1:1 ratio doesn't work well.
  */
-val GLOBAL_FACTOR: Double = 1.0
+val GLOBAL_FACTOR: Double = 1.15
 
 /**
  * Sizes, would be translated to dp.

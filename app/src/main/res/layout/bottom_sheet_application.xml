@@ -34,11 +34,10 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <!--   48dp in Figma!!     -->
                 <ImageView
                     android:id="@+id/avatar"
-                    android:layout_width="@dimen/size_x64"
-                    android:layout_height="@dimen/size_x64"
+                    android:layout_width="@dimen/size_x48"
+                    android:layout_height="@dimen/size_x48"
                     android:src="@mipmap/avatar_icon_round"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

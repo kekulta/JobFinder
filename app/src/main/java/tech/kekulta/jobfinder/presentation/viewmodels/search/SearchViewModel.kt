@@ -1,5 +1,6 @@
 package tech.kekulta.jobfinder.presentation.viewmodels.search
 
+import android.annotation.SuppressLint
 import android.content.Context
 import androidx.core.os.bundleOf
 import kotlinx.coroutines.flow.Flow
@@ -11,6 +12,7 @@ import tech.kekulta.jobfinder.domain.repositories.LikesRepository
 import tech.kekulta.jobfinder.domain.repositories.OffersRepository
 import tech.kekulta.jobfinder.domain.repositories.VacanciesRepository
 import tech.kekulta.jobfinder.domain.usescases.GetRecommendationsUseCase
+import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.BackPressed
 import tech.kekulta.jobfinder.presentation.ui.events.DislikeVacancyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.EventDispatcher
@@ -21,7 +23,6 @@ import tech.kekulta.jobfinder.presentation.ui.events.NavigateBack
 import tech.kekulta.jobfinder.presentation.ui.events.NavigateTo
 import tech.kekulta.jobfinder.presentation.ui.events.OpenDialog
 import tech.kekulta.jobfinder.presentation.ui.events.OpenLink
-import tech.kekulta.jobfinder.presentation.ui.events.ApplyPressed
 import tech.kekulta.jobfinder.presentation.ui.events.ShowMore
 import tech.kekulta.jobfinder.presentation.ui.events.UiEvent
 import tech.kekulta.jobfinder.presentation.ui.events.UiEventDispatcher
@@ -30,13 +31,15 @@ import tech.kekulta.jobfinder.presentation.viewmodels.base.AbstractCoroutineView
 import tech.kekulta.navigation.DestArgs
 import tech.kekulta.navigation.Destination
 
+@SuppressLint("StaticFieldLeak")
 class SearchViewModel(
     private val getRecommendationsUseCase: GetRecommendationsUseCase,
     private val vacanciesRepository: VacanciesRepository,
     private val offersRepository: OffersRepository,
     private val likesRepository: LikesRepository,
     private val navEventDispatcher: NavEventDispatcher,
-    // TODO: resource manager
+    // We have App Context here so it's ok.
+    // Would be great to add some kind of resource manager later on.
     private val context: Context,
 ) : AbstractCoroutineViewModel(), EventDispatcher<UiEvent> by UiEventDispatcher() {
     private val screenType = MutableStateFlow(SearchStateType.RECOMMENDATIONS)

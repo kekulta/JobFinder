@@ -51,7 +51,6 @@
         <item name="android:minHeight">@dimen/size_x40</item>
     </style>
 
-    <!--    40dp in figma!!    -->
     <style name="JobFinder.Button.Small1" parent="@android:style/Widget.Button">
         <item name="android:gravity">center</item>
         <item name="iconGravity">textStart</item>
@@ -62,18 +61,16 @@
         <item name="android:iconTint">@color/text_color</item>
         <item name="backgroundTint">@color/grey2</item>
         <item name="android:textColor">@color/text_color</item>
-        <item name="android:minHeight">@dimen/size_x48</item>
-        <item name="android:minWidth">@dimen/size_x48</item>
+        <item name="android:minHeight">@dimen/size_x40</item>
+        <item name="android:minWidth">@dimen/size_x40</item>
     </style>
 
-    <!--    48dp in figma!!    -->
     <style name="JobFinder.Button.Small2" parent="Widget.Material3.ExtendedFloatingActionButton.Icon.Primary">
         <item name="android:textAppearance">@style/TextAppearance.JobFinder.Title3</item>
         <item name="backgroundTint">@color/grey2</item>
         <item name="shapeAppearance">@drawable/background_round_high</item>
     </style>
 
-    <!--    33dp in figma!!    -->
     <style name="JobFinder.Button.Small3" parent="@android:style/Widget.Button">
         <item name="android:paddingHorizontal">@dimen/size_x12</item>
         <item name="android:gravity">center</item>
@@ -85,8 +82,8 @@
         <item name="android:iconTint">@color/text_color</item>
         <item name="backgroundTint">@color/grey2</item>
         <item name="android:textColor">@color/text_color</item>
-        <item name="android:minHeight">@dimen/size_x36</item>
-        <item name="android:minWidth">@dimen/size_x36</item>
+        <item name="android:minHeight">@dimen/size_x32</item>
+        <item name="android:minWidth">@dimen/size_x32</item>
     </style>
 
     <!-- Text -->
